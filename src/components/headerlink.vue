@@ -1,23 +1,59 @@
 <template>
    <header>
-       <div v-for="header in header" key="header.image.text">
-           :img="header.image"
-           :Text="header.text"
+       <div>
+           <div class="logo">
+               <img :src="logo">
+               </div>
+           <Header :key="index" v-for="(link,index) in links"            
+           :Text="link.text"/>
        </div>
    </header>
 </template>
 
 <script>
+
+import Header from './Header.vue'
+
 export default {
+    components:{
+            Header
+    },
     data() {
         return{
-            header: [
-                {
-                require('../assets/dc-logo.png'),
-                  image:"../assets/dc-logo.png",
-                  text: "Characters comics movies tv games collectibles videos fans news shop" 
+            logo:require("../assets/dc-logo.png"),
+            links: [
+                {               
+                  
+                  text: "Characters" 
      
-                }
+                },
+                {                    
+                    text:"Comics"    
+                },
+                {                    
+                    text:"movies"    
+                },
+                {                    
+                    text:"tv"    
+                },
+                {                    
+                    text:"games"    
+                },
+                {                    
+                    text:"collectibles"    
+                },
+                {                    
+                    text:"videos"    
+                },
+                {                    
+                    text:"fans"    
+                },
+                 {                    
+                    text:"news"    
+                },
+                 {                    
+                    text:"shop"    
+                },
             ]
         }
     }

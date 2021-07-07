@@ -1,36 +1,20 @@
 <template>
-    <div>
-        <img :src="img" />
+    <div key="header.image.text">
         <p>{{Text}}</p>
     </div>
 </template>
 
 <script>
 export default {
-    props:{
-        img: String,
+    props:{       
         Text: String
-    }
+            }
 }
 </script>
 
 <style lang ="scss" scoped>
 
-Header{
-    text-align: center;
-    float: left;
-    ul {
-        list-style: none;
-        text-decoration: none;
-        li {
-            margin-right: 10px;
-            display: inline-block;
-            text-transform: uppercase;
-           
-            
-            
-        }
-    }
-}
+    
+
 
 </style>
