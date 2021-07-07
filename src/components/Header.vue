@@ -26,6 +26,23 @@ export default {
 }
 </script>
 
-<style>
+<style lang ="scss" scoped>
+
+Header{
+    text-align: center;
+    float: left;
+    ul {
+        list-style: none;
+        text-decoration: none;
+        li {
+            margin-right: 10px;
+            display: inline-block;
+            text-transform: uppercase;
+           
+            
+            
+        }
+    }
+}
 
 </style>
